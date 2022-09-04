@@ -1,3 +1,5 @@
+// ****************************************** LEARNING PHASE 1 **********************************************************************
+
 // QUEUE and STACK are implemented using an array
 // Class implementation makes it a lot simpler for us to do FIFO and LIFO
 
@@ -88,7 +90,7 @@ with a number you visited every single time
 //         unique.add(value);
 //         console.log("unique", unique);
 //     }
-//     return value;
+//     return unique;
 // }
 
 // console.log((uniqueValues(input)));
@@ -102,25 +104,25 @@ of map are actually unique
 */
 
 //  task here is to count how many times each name shows up
-let names = ["Beng", "John", "Chris", "John", "Bryan", "Beng", "Michael"]
+// let names = ["Beng", "John", "Chris", "John", "Bryan", "Beng", "Michael"]
 
-function countNames(input) {
-    let counter = new Map();
+// function countNames(input) {
+//     let counter = new Map();
 
-    for (let key of input) {
-        if (counter.has(key)) { // we have seen the name before
-            let oldValue = counter.get(key);
-            counter.set(key, oldValue + 1);
-        }
-        else { // we have not seen the name before
-            counter.set(key, 1);
-        }
+//     for (let key of input) {
+//         if (counter.has(key)) { // we have seen the name before
+//             let oldValue = counter.get(key);
+//             counter.set(key, oldValue + 1);
+//         }
+//         else { // we have not seen the name before
+//             counter.set(key, 1);
+//         }
 
-        console.log("key", key);
-        console.log("counter", counter);
-    }
+//         console.log("key", key);
+//         console.log("counter", counter);
+//     }
 
-    return counter;
-}
+//     return counter;
+// }
 
-console.log(countNames(names));
+// console.log(countNames(names));
