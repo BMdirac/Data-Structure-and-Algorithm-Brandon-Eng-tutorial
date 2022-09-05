@@ -32,7 +32,7 @@ or press the run button at the top right corner of the environment (vs code)
 // }
 // // note that for loop breaks out rather than displaying undefined value
 
-// // for loop that can be used specifically for arrays
+// // 'for loop' that can be used specifically for arrays
 // // to print out values without caring about what index they were we use the 'for of loop'
 // for (let value of myFirstArray) {
 //     console.log(value);
@@ -40,7 +40,7 @@ or press the run button at the top right corner of the environment (vs code)
 
 /*********************************************  SETS *******************/
 
-// // sets is a powerful tool if you are trying to find unique value
+// sets is a powerful tool if you are trying to find unique value
 // let myFirstSet = new Set()
 // myFirstSet.add(3);
 // myFirstSet.add(3);
@@ -72,33 +72,145 @@ the map split out is called the value
 Essentially a map allows you to connect a key to a value
 */
 
-// let myFirsMap = new Map();
+// let myFirstMap = new Map();
 // // 'set()' is used to add data to map
-// myFirsMap.set("red", 1)
-// myFirsMap.set("blue", 7)
-// console.log(myFirsMap);
+// myFirstMap.set("red", 1)
+// myFirstMap.set("blue", 7)
+// console.log(myFirstMap);
 // // 'get()' is used to get a value for a key from a map
-// console.log(myFirsMap.get("blue"))
+// console.log(myFirstMap.get("blue"))
 // // note that you cannot have multiples of the same key
 // // all of the key have to be unique ( just like all of the data have to be unique in set)
 
 // // we can also use 'size' to determine the size of map
-// console.log(myFirsMap.size);
+// console.log(myFirstMap.size);
 
-// // we can also use 'delete' a specific key-value pair from a map
-// console.log(myFirsMap);
-// myFirsMap.delete("red");
-// console.log(myFirsMap);
+// // we can also use 'delete' to remove a specific key-value pair from a map
+// console.log(myFirstMap);
+// myFirstMap.delete("red");
+// console.log(myFirstMap);
 
 // // to use 'for of loop' in map we have to use the function keys()
-// for (let key of myFirsMap.keys()) {
+// for (let key of myFirstMap.keys()) {
 //     console.log("key", key) // to get key
-//     console.log("Value", myFirsMap.get(key)) // to get value
+//     console.log("Value", myFirstMap.get(key)) // to get value
 // }
 
 // // to see if there is an associated key inside a map use has()
-// console.log(myFirsMap.has("blue"))
-// console.log(myFirsMap.has("red"))
+// console.log(myFirstMap.has("blue"))
+// console.log(myFirstMap.has("red"))
+
+
+/*********************************************  OBJECTS *******************/
+
+// they are very similar to maps (they have unique key)
+
+// let myFirstObject = [];
+// // we add the value 'Beng' through 'name' property
+// myFirstObject.name = "Beng";
+// // we add the value '25' through 'age' property
+// myFirstObject.age = 25;
+// console.log(myFirstObject);
+// // use 'delete' to remove a property from an object
+// delete myFirstObject.age;
+// console.log(myFirstObject);
+
+// // use 'in' keyword inside an 'if statement' to see if an object contains a specific property or not 
+// if ("name" in myFirstObject) {
+//     console.log("I have this!") // result: 'I have this!' is display (this is printed because 'name' property is present)
+// }
+
+// if ("age" in myFirstObject) {
+//     console.log("I have this!") // result: nothing is printed out (this is printed because 'age' property is not present. It has been deleted)
+// }
+
+// // to print out specific value for the object
+// console.log(myFirstObject.name);
+// console.log(myFirstObject.age);
+// // note that the syntax for setting property for the object is similar to that for getting that property from the object
+
+// // Besides using dot notation to set and get property we can also use square bracket notation
+
+// // to add property of height
+// myFirstObject['height'] = 90;
+// console.log(myFirstObject);
+// // to the value of the height property
+// console.log(myFirstObject['height']); // similar to how we use the indexing notation with arrays
+
+// // we can use the 'for in loop' keyword to loop through all of the property of an object
+// for (let property in myFirstObject) {
+//     console.log("property", property); // to get all the properties 
+//     console.log("value", myFirstObject[property]); // to get all the values associated to all the properties 
+// }
+
+
+/************************************** CLASSES *************************/
+
+// Class data structure is very important when you are doing 'object oriented programming'
+// Essentially think of class as predefined definitions object 
+// In 'Object data structure' for instance you can freely add an remove properties as you please  
+// with 'classes' we predefined those properties and they have to stay
+// class Person {
+//     // it essentially defines the properties that we want for the classes
+//     constructor(name, age) {
+//         // 'this' is used to refer to specific instance of person
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// // sets and maps are also call this way
+// // this shows that sets and maps are built in 'classes' in JavaScript
+// let myFirstPerson = new Person("Beng", 25);
+// console.log(myFirstPerson);
+// console.log(myFirstPerson.name);
+
+// let mySecondPerson = new Person("John", 25);
+// console.log(mySecondPerson);
+// console.log(mySecondPerson.age);
+
+
+/************************************** FUNCTIONS *************************/
+
+/*
+functions are great because if we want to reuse code
+in multiple places we won't have to duplicate it,
+instead we just instead make a new function call
+*/
+
+// classes can also have function built into them
+// but when a function is inside a class, its actually called a method
+// class Person {
+//     // it essentially defines the properties that we want for the classes
+//     constructor(name, age) {
+//         // 'this' is used to refer to specific instance of person
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     // this is called a method
+//     sayHello() {
+//         console.log('Hi!');
+//     }
+
+//     // method taking parameter
+//     sayHelloToSomeone(person) {
+//         console.log('Hello ' + person.name)
+//     }
+
+//     introduce() {
+//         console.log("My name is " + this.name);
+//     }
+// }
+
+// let myFirstPerson = new Person("Beng", 25);
+// let mySecondPerson = new Person("John", 25);
+
+// mySecondPerson.sayHello(); // result: Hi!
+// mySecondPerson.sayHelloToSomeone(myFirstPerson); // result: Hello Beng
+
+// myFirstPerson.introduce(); // result: My name is Beng
+// mySecondPerson.introduce(); // result: My name is John
 
 
 // ****************************************** LEARNING PHASE 1 **********************************************************************
