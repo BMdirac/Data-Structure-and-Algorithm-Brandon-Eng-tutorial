@@ -170,7 +170,7 @@ Essentially a map allows you to connect a key to a value
 // console.log(mySecondPerson.age);
 
 
-/************************************** FUNCTIONS *************************/
+/************************************** FUNCTIONS ('Method' here) *************************/
 
 /*
 functions are great because if we want to reuse code
